@@ -1,0 +1,75 @@
+@media (max-width: 600px) {
+  header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    margin-left: 0;
+    margin-block: unset;
+    margin-bottom: 16px;
+  }
+
+  header div {
+    margin-left: 0;
+    margin-bottom: 16px;
+    height: 90px;
+  }
+
+  .pokemonInfoCard {
+    height: 450px;
+    width: 250px;
+    padding: 24px 24px 48px 24px;
+  }
+
+  .phases40 {
+    --phaseSize: 24px;
+  }
+
+  .pokeballBgInfo {
+    height: 250px;
+  }
+
+  .typeContainerInfo {
+    margin-top: 8px;
+  }
+
+  .pokemonInfoImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pokemonInfoCardBottom {
+    height: 270px;
+  }
+
+  .infoNav {
+    margin-top: 16px;
+  }
+
+  .aboutDescription {
+    height: 48px;
+  }
+
+  #myChart {
+    width: 230px !important;
+    height: 230px !important;
+  }
+
+  #movesContainer {
+    max-height: 200px;
+  }
+
+  .control {
+    flex-direction: column;
+    justify-content: space-between;
+    width: unset;
+    height: 620px;
+    top: unset;
+  }
+
+  .controlIcons {
+    font-size: 44px !important;
+  }
+}

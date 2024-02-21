@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/pokeball.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/icons.css" />
+    <link rel="stylesheet" href="./css/mediaquerrie.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="./scripts/templates.js" defer></script>
+    <script src="./scripts/help_functions.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <title>Pokedex</title>
+  </head>
+  <body onload="loadPokemon()">
+    <header>
+      <h1>Pokedex</h1>
+      <div>
+        <input id="searchInput" type="text" placeholder="Enter Name..." />
+        <input id="searchInputID" type="text" placeholder="Enter Number..." />
+        <button onclick="loadAllPokemon()">Load all</button>
+      </div>
+    </header>
+    <section id="pokedex"></section>
+
+    <span
+      onclick="backToTop()"
+      id="backToTop"
+      class="material-symbols-outlined controlIcons"
+    >
+      arrow_circle_up
+    </span>
+    <div id="pokemonInfoBgPerma" class="pokemonInfoBgPerma d-none"></div>
+  </body>
+</html>

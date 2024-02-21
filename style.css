@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  margin-bottom: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+header h1 {
+  font-size: 64px;
+  color: rgb(56, 91, 168);
+  filter: drop-shadow(0 0 10px rgba(245, 204, 1, 1));
+  margin-left: 64px;
+}
+
+header div {
+  margin-left: 64px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header input {
+  height: 16px;
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  padding: 4px;
+  width: 100px;
+}
+
+header button {
+  color: white;
+  background-color: rgb(56, 91, 168);
+  border: 2px solid rgba(245, 204, 1, 1);
+  width: 110px;
+  height: 26px;
+  border-radius: 13px;
+  transition: all 200ms;
+}
+
+header button:hover {
+  transform: scale(1.1);
+  background-color: rgba(70, 115, 212, 1);
+  cursor: pointer;
+}
+
+#pokedex {
+  min-height: 50vh;
+  color: white;
+  margin: 0 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+/* Pokdex Cards */
+
+.pokedexCard {
+  width: 180px;
+  height: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms;
+  overflow: hidden;
+}
+
+.pokedexCard:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.phases40 {
+  --phaseSize: 40px;
+
+  clip-path: polygon(
+    0% var(--phaseSize),
+    var(--phaseSize) 0%,
+    calc(100% - var(--phaseSize)) 0%,
+    100% var(--phaseSize),
+    100% calc(100% - var(--phaseSize)),
+    calc(100% - var(--phaseSize)) 100%,
+    var(--phaseSize) 100%,
+    0% calc(100% - var(--phaseSize))
+  );
+}
+
+.pokeballBg {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 90px;
+
+  height: 260px;
+  opacity: 0.4;
+}
+
+.pokedexCardContent {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokedexCard h1 {
+  margin-block: unset;
+  font-size: 28px;
+}
+
+.typeContainer {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-around;
+}
+
+.typeLable {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  border-radius: 12px;
+}
+
+.imgWithId {
+  margin-top: 16px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgWithId img {
+  width: 180px;
+  height: 180px;
+  transition: all 200ms;
+}
+
+.imgWithId img:hover {
+  transform: scale(1.2);
+}
+
+.imgWithId div {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Pokemon Info Card */
+
+.pokemonInfoBg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.pokemonInfoBgPerma {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.pokemonInfoCard {
+  height: 600px;
+  width: 300px;
+  padding: 32px 32px 64px 32px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.pokeballBgInfo {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 180px;
+
+  height: 300px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.pokemonInfoCardTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closeIcon {
+  align-self: flex-end;
+  font-size: 32px !important;
+}
+
+.closeIcon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.infoNameWithId {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.infoNameWithId h1 {
+  margin-block: unset;
+  font-size: 28px;
+}
+
+.infoNameWithId div {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.typeContainerInfo {
+  display: flex;
+  width: 100%;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.typeContainerInfo .typeLable {
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+.pokemonInfoImg {
+  width: 240px;
+  height: 240px;
+  z-index: 2;
+}
+
+/* Info Card Bottom elemnts */
+
+.pokemonInfoCardBottom {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 320px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoNav {
+  margin-top: 32px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.infoNav span:hover {
+  cursor: pointer;
+}
+
+.infoNav span {
+  text-underline-offset: 8px;
+}
+
+.infoNavNotAktiv {
+  text-decoration: none !important;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 16px;
+  width: 80%;
+}
+
+.aboutMargins {
+  margin-right: 80px;
+  width: 48px;
+}
+
+.aboutSections {
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.genderRate {
+  display: flex;
+}
+
+.genderRate span {
+  display: flex;
+  align-items: center;
+}
+
+.aboutDescription {
+  margin-top: 4px;
+  overflow-y: auto;
+  height: 90px;
+}
+
+#infoStats {
+  width: 80%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+#myChart {
+  width: 260px !important;
+  height: 260px !important;
+}
+
+#myChartContainer {
+  display: none;
+}
+
+#infoMoves {
+  display: flex;
+  justify-content: center;
+}
+
+#movesContainer {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  max-height: 240px;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+.moves {
+  padding: 2px 4px;
+  height: 23px;
+  border-radius: 11.5px;
+  color: white;
+}
+
+/* Back to top button */
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+
+/* Next and previos Pokemon */
+
+.controlIcons {
+  z-index: 99;
+  color: rgb(245, 204, 1);
+  background-color: rgb(56, 91, 168);
+  border-radius: 50%;
+  font-size: 64px !important;
+  transition: all 150ms;
+}
+
+.controlIcons:hover {
+  transform: scale(1.1);
+  background-color: rgba(70, 115, 212, 1);
+  cursor: pointer;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+  position: absolute;
+  top: 50vh;
+}
+
+/* Loading Animation */
+
+.loadingSpinner {
+  position: absolute;
+  top: 120px;
+}
+
+.loadingSpinner img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
