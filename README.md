@@ -4,7 +4,7 @@
 
   <p>In this project, the PokéAPI was used to create a Pokédex to display various information about Pokémon.</p>
 
-👉 Live Demo: <a href='https://scholz-florian.com/pokedex/'>Live Demo</a>
+👉 Live Demo: <a href='https://pokedex.scholz-florian.com/'>Live Demo</a>
 
 <h3>Key Features:</h3>
 
